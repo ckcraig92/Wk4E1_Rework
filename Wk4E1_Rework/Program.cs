@@ -15,9 +15,9 @@ namespace Wk4E1_Rework
 
                 //ask for user input
                 Console.WriteLine("Enter the number:");
-                n = Convert.ToInt32(Console.ReadLine());
+                n = Convert.ToInt32(Console.ReadLine()); //convert to int
 
-                int[] numbers = new int[n];
+                int[] numbers = new int[n]; //create array
 
                 //create methods
                 InputArray(numbers);
@@ -41,7 +41,7 @@ namespace Wk4E1_Rework
             static void PrintArray(int[] array)
             {
                 Console.WriteLine("Array elements are:");
-                for (int i = 0; i < array.Length; i++)
+                for (int i = 0; i < array.Length; i++)//loop through each postion in array
                 {
                     Console.WriteLine(array[i]);
                 }
@@ -50,14 +50,14 @@ namespace Wk4E1_Rework
             //method to calculate the sum
             static void PrintSum(int[] array)
             {
-                int sum = 0;
+                int sum = 0; //initalize at 0
 
-                for (int i = 0; i < array.Length; i++)
+                for (int i = 0; i < array.Length; i++) //loop through to add each to sum
                 {
                     sum = sum + array[i];
                 }
 
-                Console.WriteLine("Sum of all elements: " + sum);
+                Console.WriteLine("Sum of all elements: " + sum); //print for user to view
             }
 
             // Method to find and print the maximum and minimum values
@@ -66,6 +66,7 @@ namespace Wk4E1_Rework
                 int max = array[0];
                 int min = array[0];
 
+            //loop to determine min & max
                 for (int i = 1; i < array.Length; i++)
                 {
                     if (array[i] > max)
@@ -77,7 +78,7 @@ namespace Wk4E1_Rework
                         min = array[i];
                     }
                 }
-
+                //print for user to view
                 Console.WriteLine("Maximum value: " + max);
                 Console.WriteLine("Minimum value: " + min);
             }
@@ -85,10 +86,10 @@ namespace Wk4E1_Rework
             //method to reverse & print
             static void ReverseArray(int[] array)
             {
-                Console.WriteLine("Reversed array:");
-                for (int i = array.Length - 1; i >= 0; i--)
+                Console.WriteLine("Reversed array:");//print for user to view
+                for (int i = array.Length - 1; i >= 0; i--) //start last & move back
                 {
-                    Console.WriteLine(array[i]);
+                    Console.WriteLine(array[i]); //print for user to view
                 }
             }
         }
